@@ -10,7 +10,8 @@ export default {
       {name: 'viewport', content: 'width=device-width, initial-scale=1'},
       {hid: 'description', name: 'description', content: 'Aron技术blog 是一个 php,nginx,go,mysql,linux 在线学习平台,在线文档托管平台'},
       {name: 'format-detection', content: 'telephone=no'},
-      {name: 'keywords', content: 'php,nginx,go,mysql,linux,在线学习,在线阅读,在线创作,知识付费,文档编辑'}
+      {name: 'keywords', content: 'php,nginx,go,mysql,linux,在线学习,在线阅读,在线创作,知识付费,文档编辑'},
+      {name: 'baidu-site-verification', content: 'code-TdJzBDTR4n'},
     ],
     link: [
       {rel: 'icon', type: 'image/x-icon', href: '/favicon.ico'}
