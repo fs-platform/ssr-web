@@ -45,4 +45,7 @@ export default {
 .el-header {
   padding: 0
 }
+.el-menu{
+  height: 60px;
+}
 </style>

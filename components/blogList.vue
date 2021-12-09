@@ -11,10 +11,11 @@
         <div class="filed">
           <span class="view">
               <i class="el-icon-star-on"></i>
-             <span>{{ item.like }}</span>
+              <span>{{ item.like }}</span>
           </span>
-          |
-          <span class="view">
+        </div>
+        <div class="filed">
+             <span class="view">
              <i class="iconfont">&#xe633;</i>
              <span>{{ item.view ? item.view : 0 }}</span>
           </span>
@@ -77,11 +78,6 @@ export default {
   box-sizing: border-box;
 }
 
-.view {
-  width: 26%;
-  display: inline-block;
-}
-
 .child_view {
   display: flex;
   justify-content: flex-start;
@@ -109,19 +105,28 @@ export default {
 }
 
 .filed {
-  width: 16%;
+  width: 15%;
   overflow: hidden;
   text-overflow: ellipsis !important;
   text-align: center;
   display: inline-block;
-  white-space: nowrap
+  white-space: nowrap;
+  position: relative;
 }
 
 .filed:nth-child(1) {
-  width: 9%;
+  width: 5%;
 }
 
 .filed:nth-child(2) {
   width: 32%;
+  text-align: left;
+}
+.filed:nth-child(4) {
+  width:12%;
+}
+
+.filed:nth-child(5) {
+  width:10%;
 }
 </style>
