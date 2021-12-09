@@ -1,7 +1,7 @@
 <template>
   <el-card class="box-card">
     <el-scrollbar height="600px">
-      <el-row justify="space-around" align="middle" :gutter="20" v-for="(item,index) in articles" :key="item.id"
+      <el-row justify="space-around" align="middle" v-for="(item,index) in articles" :key="item.id"
               class="infinite-list-item">
         <div class="filed">{{ index + 1 }}</div>
         <div class="filed">
@@ -9,10 +9,17 @@
         </div>
         <div class="filed">{{ item.author }}</div>
         <div class="filed">
-          <i class="el-icon-star-on"></i>
-          {{ item.like }}
+          <span class="view">
+              <i class="el-icon-star-on"></i>
+             <span>{{ item.like }}</span>
+          </span>
+          |
+          <span class="view">
+             <i class="iconfont">&#xe633;</i>
+             <span>{{ item.view ? item.view : 0 }}</span>
+          </span>
         </div>
-        <div class="filed">{{formatDate(item.updated_at) }}</div>
+        <div class="filed">{{ formatDate(item.updated_at) }}</div>
       </el-row>
     </el-scrollbar>
   </el-card>
@@ -68,6 +75,17 @@ export default {
   line-height: 50px;
   border-bottom: 1px solid #ccc;
   box-sizing: border-box;
+}
+
+.view {
+  width: 26%;
+  display: inline-block;
+}
+
+.child_view {
+  display: flex;
+  justify-content: flex-start;
+  align-items: baseline;
 }
 
 .card-header {
