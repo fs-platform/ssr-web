@@ -1,7 +1,7 @@
 import {MessageBox} from 'element-ui';
 
 export default function ({$axios, redirect}) {
-  $axios.setBaseURL(process.env.NODE_ENV === "development" ? "http://www.fs-developer.com/api" : "http://www.fs-developer.com/api")
+  $axios.setBaseURL(process.env.NODE_ENV === "development" ? "https://www.fs-developer.com/api" : "https://www.fs-developer.com/api")
   $axios.onResponse(response => {
     let {data} = response
     if (data.statusCode !== 0) {
